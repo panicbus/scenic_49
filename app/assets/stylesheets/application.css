@@ -19,9 +19,9 @@ html, body {
   width: 100%;
 }
 
-.navbar {
+/*.navbar {
 	z-index: 1000;
-}
+}*/
 
 .navbar-brand {
 	font-size: 25px;
@@ -50,7 +50,7 @@ html, body {
 	float: left;
 	width: 75%;
 	height: 100%;
-	/*z-index: -100;*/
+	z-index: -100;
 	position: absolute;
 	padding: 0;
 }
@@ -75,4 +75,6 @@ html, body {
 	margin: 5px;
 }
 
-
+.about_modal {
+	cursor: pointer;
+}
