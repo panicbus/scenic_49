@@ -18,7 +18,7 @@ function initialize_map(){
 	var	map = new L.mapbox.map('map', 'panicbus.h4on0f5b').setView([37.775,-122.419], 13);
 
 	// the json data for marker locations
-	var geoJson = [
+	var geoJson_point = [
 	    {
 	        type: 'Feature',
 	        geometry: {
@@ -27,7 +27,7 @@ function initialize_map(){
 	        },
 	        properties: {
 	            title: 'Marker one',
-	            description: '<strong>Wow</strong>, this tooltip is breaking all the rules.',
+	            description: 'The content of marker one.',
 	            'marker-color': '#548cba'
 	        }
 	    },
@@ -35,20 +35,66 @@ function initialize_map(){
 	        type: 'Feature',
 	        geometry: {
 	            type: 'Point',
-	            coordinates: [-122.413, 37.774]
+	            coordinates: [  -122.46032953262329, 37.76966311138133]
 	        },
 	        properties: {
 	            title: 'Marker two',
-	            description: 'Another marker, including <a href="http://mapbox.com">a link</a>.',
+	            description: 'The content of marker two, with <a href="http://mapbox.com">a link</a>.',
 	            'marker-color': '#548cba'
 	        }
-	    }
+	    },
+	    {
+			  type: "Feature",
+			  properties: {},
+			  geometry: {
+			    type: "LineString",
+			    coordinates: [
+			      [
+			        -122.46695995330812,
+			        37.76805171823878
+			      ],
+			      [
+			        -122.46455669403076,
+			        37.76966311138133
+			      ],
+			      [
+			        -122.46161699295044,
+			        37.770358543890254
+			      ],
+			      [
+			        -122.46024370193481,
+			        37.770358543890254
+			      ],
+			      [
+			        -122.45947122573853,
+			        37.77079954648267
+			      ],
+			      [
+			        -122.45923519134521,
+			        37.77129143088672
+			      ],
+			      [
+			        -122.4558663368225,
+			        37.77088435437199
+			      ],
+			      [
+			        -122.45535135269164,
+			        37.77078258489315
+			      ],
+			      [
+			        -122.45537281036377,
+			        37.770443352285376
+			      ]
+			    ]
+			  }
+			}
 	];
 	// adds the json to the map layer
-	map.markerLayer.setGeoJSON(geoJson);
+	map.featureLayer.setGeoJSON(geoJson_point);
+
 
 	// this is the marker click listener 
-	map.markerLayer.on('click',function(e) {
+	map.featureLayer.on('click',function(e) {
     var feature = e.layer.feature;
     var info = '<h2>' + feature.properties.title + '</h2>' +
                '<p>' + feature.properties.description + '</p>';
@@ -64,7 +110,7 @@ map.on('click',function(e){
 
 
 
-	map.markerLayer.on('layeradd', function(e) { 
+	map.featureLayer.on('layeradd', function(e) { 
     var marker = e.layer, 
         feature = marker.feature; 
 
@@ -81,9 +127,9 @@ map.on('click',function(e){
 
 	});
 
-// map.markerLayer.setGeoJSON(geoJson);
+// map.featureLayer.setGeoJSON(geoJson);
 
-	myMarkers.loadURL('data.json');
+	// myMarkers.loadURL('data.json');
 
 
 };
