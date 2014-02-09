@@ -24,27 +24,36 @@ function initialize_map(){
 
 	map.featureLayer.eachLayer(function(layer){
 
-		var popupContent = '<p>This is the content</p>' +
-											 '<form>' +
-											 'First name: <input type="text" name="firstname"><br>' +
-											 'Last name: <input type="text" name="lastname">' +
-											 '</form>'; 
+		// debugger
+		if (layer.feature.properties.title != undefined ) {  
+			var popupContent = '<p>'+ layer.feature.properties.title + '</p>' +
+												 '<form>' +
+												 'Name: ' +
+												 '<input type="text" name="name"><br>' +
+												 'Comment: 	' +
+												 '<textarea rows="4" cols="55	" name="comment" form="usrform">Enter text here...</textarea>' +
+												 '<input type="submit">' +
+												 '</form>'; 
 
-		layer.bindPopup(popupContent,{ 
-			closeButton: true, 
-			minWidth: 320 
-		}); 
-
+			layer.bindPopup(popupContent,{ 
+				closeButton: true, 
+				minWidth: 320 
+			}); 
+		}
 	})
 
 
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
+
     var feature = e.layer.feature;
     var info = '<h2>' + feature.properties.title + '</h2>' +
                '<p>' + feature.properties.description + '</p>';
 
-    document.getElementById('site-1').innerHTML = info;
+
+		if (feature.properties.title != undefined ) { 
+    	document.getElementById('site-1').innerHTML = info;
+		}
 	});
 
 	// Clear the tooltip when map is clicked

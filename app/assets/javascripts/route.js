@@ -26,10 +26,6 @@
       },
       {
         type: "Feature",
-        properties: {
-          'line-color': '#9ed1dc',
-          'line-width': 20
-        },
         geometry: {
           type: "LineString",
           coordinates: [
@@ -70,6 +66,7 @@
               37.770443352285376
             ]
           ]
-        }
+        },
+        properties: {}
       }
   ];
