@@ -1,29 +1,116 @@
-// the json data for marker locations and lines
+// all the json data for marker locations and routeline
+
 var geoJson_features = [
     {
       type: 'Feature',
       geometry: {
-          type: 'Point',
-          coordinates: [-122.453, 37.771]
+        type: 'Point',
+        coordinates: [-122.453, 37.771]
       },
       properties: {
-          title: 'Marker one',
-          description: 'The content of marker one.',
-          'marker-color': '#548cba'
+        title: 'Station 1',
+        description: 'AIDS Memorial, Golden Gate Park.',
+        'marker-color': '#548cba'
       }
     },
     {
       type: 'Feature',
       geometry: {
-          type: 'Point',
-          coordinates: [-122.46032953262329, 37.76966311138133]
+        type: 'Point',
+        coordinates: [-122.39400386810303, 37.795220198366735]
       },
       properties: {
-          title: 'Marker two',
-          description: 'The content of the marker two, with <a href="#">a link</a>.',
-          'marker-color': '#548cba'
+        title: 'Station 2',
+        description: 'Embarcadero and the Ferry Building, with <a href="#">a demo link</a>.',
+        'marker-color': '#548cba'
       }
     },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.4591064453125, 37.74728704926913]
+      },
+      properties: {
+        title: 'Station 3',
+        description: 'Laguna Honda and Dewey - the backside of Twin Peaks',
+        'marker-color': '#548cba'
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.42473125457762, 37.747931791686426]
+      },
+      properties: {
+        title: 'Station 4',
+        description: 'Cesar Chavez and Delores',
+        'marker-color': '#548cba'
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.51024007797241, 37.76408245273552 ]
+      },
+      properties: {
+        title: 'Station 5',
+        description: 'Lincoln Ave and The Great Highway',
+        'marker-color': '#548cba'
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.44736909866332, 37.79850958608104 ]
+      },
+      properties: {
+        title: 'Station 6',
+        description: 'Entrance to the Presidio on Lombard',
+        'marker-color': '#548cba'
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.40524768829346, 37.78875968591083 ]
+      },
+      properties: {
+        title: 'Station 7',
+        description: 'Chinatown Gate',
+        'marker-color': '#548cba'
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.41713523864746, 37.77956816727315]
+      },
+      properties: {
+        title: 'Station 8',
+        description: 'Civic Center Plaza',
+        'marker-color': '#548cba'
+      }
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.39996910095215, 37.79325327800921]
+      },
+      properties: {
+        title: 'Station 9',
+        description: 'Finanacial District',
+        'marker-color': '#548cba'
+      }
+    },
+
+    ////// the route linestring starts here ///////
     {
       type: "Feature",
       geometry: {
