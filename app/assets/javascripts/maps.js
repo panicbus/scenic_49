@@ -24,12 +24,13 @@ function initialize_map(){
 	map.featureLayer.eachLayer(function(layer){
 
 		if (layer.feature.properties.title != undefined ) {  
+
 			var popupContent = '<h1>'+ layer.feature.properties.title + '</h1>' +
-												 '<form>' +
+												 '<form id="checkin_form">' +
 												 'Name: ' +
 												 '<input type="text" name="name" id="name"><br>' +
 												 'Comment: 	' +
-												 '<textarea rows="4" cols="55	" name="comment" id="comment" form="usrform" placeholder="Enter your comment..."></textarea>' +
+												 '<textarea rows="4" cols="55	" name="comment" id="comment" placeholder="Enter your comment..."></textarea>' +
 												 '<input type="hidden" id="location_id" name="location_id" value="' + layer.feature.properties.location_id + '">' +
 												 '<input type="submit" id="submit_button">' +
 												 '</form>'; 
@@ -41,6 +42,8 @@ function initialize_map(){
 		}
 	})
 
+		// $('#name').val('');
+		// $('#comment').val('');
 
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
