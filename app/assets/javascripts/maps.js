@@ -18,7 +18,7 @@ function initialize_map(){
 
 	var	map = new L.mapbox.map('map', 'panicbus.h4on0f5b').setView([37.775,-122.419], 13);
 
-		// adds the json to the map layer from route
+		// adds the json to the map layer from route.js
 	map.featureLayer.setGeoJSON(geoJson_features);
 
 	map.featureLayer.eachLayer(function(layer){
@@ -47,7 +47,7 @@ function initialize_map(){
 
 		// ajax call to the checkins method. Passes in the marker ID from the clicked marker
 		// ajax call returns the location data based on the ID of that location   
-		// the .done says -- once the ajax call is completed append 'info' with its data 
+		// the .done says: once the ajax call is completed append 'info' with its data 
 		$.get("/checkins/" + e.layer.feature.properties.location_id, e.layer.feature.properties.location_id)
 			.done(function(checkins){
 
@@ -58,9 +58,9 @@ function initialize_map(){
 	      
 			if (feature.properties.title != undefined ) { 
 
-	    	document.getElementById('site-1').innerHTML = info;
-	    	// $('#site-title').empty();
-	    	// $('#site-title').append(info);
+	    	document.getElementById('site-1').innerHTML = ' ';
+	    	$('#site-title').empty();
+	    	$('#site-title').append(info);
 
 	    // iterate thru checkins object in the DB, grab the i element of checkins.name & append to site-1
 	    	for (var i = 0; i < checkins.length; i++) {
