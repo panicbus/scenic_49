@@ -5,9 +5,9 @@ class CheckinsController < ApplicationController
 
   end
 
-  def findLocation
+  # def findLocation
 
-  end
+  # end
 
   def create
     # binding.pry

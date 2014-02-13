@@ -22,7 +22,7 @@ var geoJson_features = [
       },
       properties: {
         title: 'Station 2',
-        description: 'Embarcadero and the Ferry Building, with <a href="#">a demo link</a>.',
+        description: 'Embarcadero and the Ferry Building',
         'marker-color': '#548cba',
         location_id: 2
       }
@@ -35,7 +35,7 @@ var geoJson_features = [
       },
       properties: {
         title: 'Station 3',
-        description: 'Laguna Honda and Dewey - the backside of Twin Peaks',
+        description: 'Laguna Honda and Dewey, Twin Peaks',
         'marker-color': '#548cba',
         location_id: 3
       }
@@ -48,7 +48,7 @@ var geoJson_features = [
       },
       properties: {
         title: 'Station 4',
-        description: 'Cesar Chavez and Delores',
+        description: 'Cesar Chavez and Delores, Mission',
         'marker-color': '#548cba',
         location_id: 4
       }
