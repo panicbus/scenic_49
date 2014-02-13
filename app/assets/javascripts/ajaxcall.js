@@ -22,9 +22,8 @@ function ajax(){
 		$.post("/checkins", checkin).done(function(checkin){
 			$('#name').val('');
 			$('#comment').val('');
-			$('#site-1').append('<p><b>' + checkin.name + '<b><p>')
-			$('#site-1').append('<p>' + checkin.comment + '<p>')
-
+			$('#site-1').prepend('<p>' + checkin.comment + '<p>')
+			$('#site-1').prepend('<p><b>' + checkin.name + '<b><p>')
 		})
 
 
