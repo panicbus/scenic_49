@@ -56,8 +56,8 @@ function initialize_map(){
 
 	    var feature = e.layer.feature;
 
-	    var info = '<h2>' + feature.properties.title + '</h2>' +
-	               '<p>' + feature.properties.description + '</p>'
+	    var info = '<p class="site1_title"><b>' + feature.properties.title + '<b></p>' +
+	               '<p class="site1_desc">' + feature.properties.description + '</p>'
 	      
 			if (feature.properties.title != undefined ) { 
 
