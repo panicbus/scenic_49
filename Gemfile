@@ -20,12 +20,15 @@ group :assets do
   
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'sqlite3'
   gem 'gon'
 	gem 'pry-rails'
 end
-
 
 gem 'jquery-rails'
 
