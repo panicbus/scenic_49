@@ -69,3 +69,7 @@ html, body {
 .about_modal {
 	cursor: pointer;
 }
+
+#site-1 {
+	overflow: scroll;
+}

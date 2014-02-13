@@ -6,13 +6,6 @@ class CheckinsController < ApplicationController
   end
 
   def findLocation
-    # binding.pry
-    # @location = Location.find_by_id(params[:id])
-
-    # respond_to do |format|
-    #   format.html
-    #   format.json {render json: @location }
-    # end
 
   end
 

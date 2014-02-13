@@ -2,6 +2,7 @@ $(function(){
 	initialize_map();
 });
 
+
 function initialize_map(){
 
 // 	var layer = new L.StamenTileLayer("watercolor");
@@ -17,14 +18,11 @@ function initialize_map(){
 
 	var	map = new L.mapbox.map('map', 'panicbus.h4on0f5b').setView([37.775,-122.419], 13);
 
-
-
 		// adds the json to the map layer from route
 	map.featureLayer.setGeoJSON(geoJson_features);
 
 	map.featureLayer.eachLayer(function(layer){
 
-		// debugger
 		if (layer.feature.properties.title != undefined ) {  
 			var popupContent = '<h1>'+ layer.feature.properties.title + '</h1>' +
 												 '<form>' +
@@ -61,10 +59,12 @@ function initialize_map(){
 			if (feature.properties.title != undefined ) { 
 
 	    	document.getElementById('site-1').innerHTML = info;
+	    	// $('#site-title').empty();
+	    	// $('#site-title').append(info);
 
-	    	// iterate thru the checkins object, grab the i element of checkins.name and append to site-1
+	    // iterate thru checkins object in the DB, grab the i element of checkins.name & append to site-1
 	    	for (var i = 0; i < checkins.length; i++) {
-	        $('#site-1').append('<p>' + checkins[i].name + '<p>');
+	        $('#site-1').append('<p><b>' + checkins[i].name + '<b><p>');
 	        $('#site-1').append('<p>' + checkins[i].comment + '<p>');
 	      } // ends for loop
 
@@ -72,10 +72,17 @@ function initialize_map(){
 		}) // ends ajax 
 	});
 
-	// Clear the tooltip when map is clicked
+	// Closes the marker popup when map is clicked
 	map.on('click',function(e){
-	    document.getElementById('site-1').innerHTML = '';
+
 	});
+
+
+	// map.on('popupopen', function(e){
+	// 	marker = e.popup._source;
+	// 	console.log(marker);
+
+	// })
 
 };
 
