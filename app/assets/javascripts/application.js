@@ -14,4 +14,14 @@
 //= require jquery_ujs
 //= require_tree .
 
+$(document).ready(function(){
 
+	$('.dropdown-menu').on('click', '.drop1', function(event){
+		event.preventDefault();
+		console.log("BOOM");
+		$('#site-1').hide('slow');
+		$('#site-1').fadeIn('slow');
+
+	})
+
+})

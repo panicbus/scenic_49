@@ -26,13 +26,14 @@ function initialize_map(){
 
 		// debugger
 		if (layer.feature.properties.title != undefined ) {  
-			var popupContent = '<p>'+ layer.feature.properties.title + '</p>' +
+			var popupContent = '<h1>'+ layer.feature.properties.title + '</h1>' +
 												 '<form>' +
 												 'Name: ' +
-												 '<input type="text" name="name"><br>' +
+												 '<input type="text" name="name" id="name"><br>' +
 												 'Comment: 	' +
-												 '<textarea rows="4" cols="55	" name="comment" form="usrform">Enter text here...</textarea>' +
-												 '<input type="submit">' +
+												 '<textarea rows="4" cols="55	" name="comment" id="comment" form="usrform" placeholder="Enter your comment..."></textarea>' +
+												 '<input type="hidden" id="location_id" name="location_id" value="' + layer.feature.properties.location_id + '">' +
+												 '<input type="submit" id="submit_button">' +
 												 '</form>'; 
 
 			layer.bindPopup(popupContent,{ 
@@ -46,14 +47,29 @@ function initialize_map(){
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
 
-    var feature = e.layer.feature;
-    var info = '<h2>' + feature.properties.title + '</h2>' +
-               '<p>' + feature.properties.description + '</p>';
+		// ajax call to the checkins method. Passes in the marker ID from the clicked marker
+		// ajax call returns the location data based on the ID of that location   
+		// the .done says -- once the ajax call is completed append 'info' with its data 
+		$.get("/checkins/" + e.layer.feature.properties.location_id, e.layer.feature.properties.location_id)
+			.done(function(checkins){
 
+	    var feature = e.layer.feature;
 
-		if (feature.properties.title != undefined ) { 
-    	document.getElementById('site-1').innerHTML = info;
-		}
+	    var info = '<h2>' + feature.properties.title + '</h2>' +
+	               '<p>' + feature.properties.description + '</p>'
+	      
+			if (feature.properties.title != undefined ) { 
+
+	    	document.getElementById('site-1').innerHTML = info;
+
+	    	// iterate thru the checkins object, grab the i element of checkins.name and append to site-1
+	    	for (var i = 0; i < checkins.length; i++) {
+	        $('#site-1').append('<p>' + checkins[i].name + '<p>');
+	        $('#site-1').append('<p>' + checkins[i].comment + '<p>');
+	      } // ends for loop
+
+			} // ends append to site-1
+		}) // ends ajax 
 	});
 
 	// Clear the tooltip when map is clicked

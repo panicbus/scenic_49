@@ -5,12 +5,13 @@ var geoJson_features = [
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-122.453, 37.771]
+        coordinates: [-122.4603670835495, 37.76968431368863]
       },
       properties: {
         title: 'Station 1',
         description: 'AIDS Memorial, Golden Gate Park.',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 1
       }
     },
     {
@@ -22,7 +23,8 @@ var geoJson_features = [
       properties: {
         title: 'Station 2',
         description: 'Embarcadero and the Ferry Building, with <a href="#">a demo link</a>.',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 2
       }
     },
     {
@@ -34,7 +36,8 @@ var geoJson_features = [
       properties: {
         title: 'Station 3',
         description: 'Laguna Honda and Dewey - the backside of Twin Peaks',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 3
       }
     },
     {
@@ -46,43 +49,47 @@ var geoJson_features = [
       properties: {
         title: 'Station 4',
         description: 'Cesar Chavez and Delores',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 4
       }
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [-122.51024007797241, 37.76408245273552 ]
+        coordinates: [-122.51024007797241, 37.76408245273552]
       },
       properties: {
         title: 'Station 5',
         description: 'Lincoln Ave and The Great Highway',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 5
       }
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [-122.44736909866332, 37.79850958608104 ]
+        coordinates: [-122.44736909866332, 37.79850958608104]
       },
       properties: {
         title: 'Station 6',
         description: 'Entrance to the Presidio on Lombard',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 6
       }
     },
     {
       type: "Feature",
       geometry: {
         type: "Point",
-        coordinates: [-122.40524768829346, 37.78875968591083 ]
+        coordinates: [-122.40524768829346, 37.78875968591083]
       },
       properties: {
         title: 'Station 7',
         description: 'Chinatown Gate',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 7
       }
     },
     {
@@ -94,7 +101,8 @@ var geoJson_features = [
       properties: {
         title: 'Station 8',
         description: 'Civic Center Plaza',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 8
       }
     },
     {
@@ -106,7 +114,8 @@ var geoJson_features = [
       properties: {
         title: 'Station 9',
         description: 'Finanacial District',
-        'marker-color': '#548cba'
+        'marker-color': '#548cba',
+        location_id: 9
       }
     },
 
