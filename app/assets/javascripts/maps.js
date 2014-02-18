@@ -1,6 +1,5 @@
 $(function(){
 	initialize_map();
-	inlineValidation();
 });
 
 
