@@ -26,6 +26,7 @@ function initialize_map(){
 
 		if (layer.feature.properties.title != undefined ) { 
 
+			// passes the form to a jst template
 			var popupContent = JST['templates/popupForm'](layer);
 
 			layer.bindPopup(popupContent,{ 

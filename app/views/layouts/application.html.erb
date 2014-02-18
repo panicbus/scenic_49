@@ -74,10 +74,7 @@
 
 	<!-- 	this is the main map area -->	
 		<div id='map'>
-      <% flash.each do |key, value| %>
-        <div class="<%= key %>"><%= value %></div>
-      <% end %>
-      <div id="notice"><%= flash.now[:notice] %></div>
+      
     </div>
     
 		<%= yield %>

@@ -3,7 +3,7 @@ $(function(){
 }) 
 
 function ajax(){
-	$('body').on('click', '#submit_button', function(event){	
+	$('body').on('submit', '#checkin_form', function(event){	
 		event.preventDefault();
 
 		// creates a hash called 'checkin' with name, comment and location_id 
