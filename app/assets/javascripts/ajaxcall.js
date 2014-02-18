@@ -19,11 +19,14 @@ function ajax(){
 
 		// appends guestbook immediately on submit button click 
 		// and also posts to the appropriate location's DB table via above AJAX call 
+		
 		$.post("/checkins", checkin).done(function(checkin){
-			$('#name').val('');
+			$('#name').val(''); // empties the form fields
 			$('#comment').val('');
-			$('#site-1').prepend('<p>' + checkin.comment + '<p>')
-			$('#site-1').prepend('<p><b>' + checkin.name + '<b><p>')
+			if (checkin.name != undefined){  // keeps from posting to Guestbook if name is not entered
+				$('#site-1').prepend('<p>' + checkin.comment + '<p>');
+				$('#site-1').prepend('<p><b>' + checkin.name + '<b><p>');
+			}
 		})
 
 

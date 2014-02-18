@@ -113,7 +113,7 @@ var geoJson_features = [
       },
       properties: {
         title: 'Station 9',
-        description: 'Finanacial District',
+        description: 'Financial District',
         'marker-color': '#548cba',
         location_id: 9
       }

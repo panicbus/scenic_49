@@ -1,5 +1,6 @@
 $(function(){
 	initialize_map();
+	inlineValidation();
 });
 
 
@@ -23,17 +24,9 @@ function initialize_map(){
 
 	map.featureLayer.eachLayer(function(layer){
 
-		if (layer.feature.properties.title != undefined ) {  
+		if (layer.feature.properties.title != undefined ) { 
 
-			var popupContent = '<h1>'+ layer.feature.properties.title + '</h1>' +
-												 '<form id="checkin_form">' +
-												 'Name: ' +
-												 '<input type="text" name="name" id="name"><br>' +
-												 'Comment: 	' +
-												 '<textarea rows="4" cols="55	" name="comment" id="comment" placeholder="Enter your comment..."></textarea>' +
-												 '<input type="hidden" id="location_id" name="location_id" value="' + layer.feature.properties.location_id + '">' +
-												 '<input type="submit" id="submit_button">' +
-												 '</form>'; 
+			var popupContent = JST['templates/popupForm'](layer);
 
 			layer.bindPopup(popupContent,{ 
 				closeButton: true, 
@@ -41,9 +34,6 @@ function initialize_map(){
 			}); 
 		}
 	})
-
-		// $('#name').val('');
-		// $('#comment').val('');
 
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
@@ -59,7 +49,8 @@ function initialize_map(){
 	    var info = '<p class="site1_title"><b>' + feature.properties.title + '<b></p>' +
 	               '<p class="site1_desc">' + feature.properties.description + '</p>'
 	      
-			if (feature.properties.title != undefined ) { 
+	      /// check this conditional for undefined info!!!!
+			if (feature.properties.title != undefined) { 
 
 	    	document.getElementById('site-1').innerHTML = ' ';
 	    	$('#site-title').empty();
@@ -76,16 +67,8 @@ function initialize_map(){
 	});
 
 	// Closes the marker popup when map is clicked
-	map.on('click',function(e){
+	map.on('click',function(e){ });
 
-	});
-
-
-	// map.on('popupopen', function(e){
-	// 	marker = e.popup._source;
-	// 	console.log(marker);
-
-	// })
 
 };
 
