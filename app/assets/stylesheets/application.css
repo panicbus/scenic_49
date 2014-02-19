@@ -95,6 +95,7 @@ html, body {
 #name, #comment {
 	color: #000;
 	font-size: 17px;
+	width: 100%;
 }
 
 @media (max-width: 767px) {
