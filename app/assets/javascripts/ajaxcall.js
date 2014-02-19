@@ -6,7 +6,7 @@ function ajax(){
 	$('body').on('submit', '#checkin_form', function(event){	
 		event.preventDefault();
 
-		// to keep line breaks in comments
+		// to keep line breaks in comments (.replace == gsub)
 		var comment_content = $('#comment').val()
 		comment = comment_content.replace('\n', '<br>');
 		comment = comment_content.replace('\n\n', '<br><br>');
@@ -29,7 +29,7 @@ function ajax(){
 			$('#name').val(''); // empties the form fields
 			$('#comment').val('');
 			if (checkin.name != undefined){  // keeps from posting to Guestbook if name is not entered
-				$('#site-1').prepend('<p>' + checkin.comment + '<p>');
+				$('#site-1').prepend('<p>' + checkin.comment + '<p><br>');
 				$('#site-1').prepend('<p><b>' + checkin.name + '<b><p>');
 			}
 		})

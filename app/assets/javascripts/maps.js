@@ -7,13 +7,10 @@ function initialize_map(){
 
 	var	map = new L.mapbox.map('map', 'panicbus.h4on0f5b').setView([37.775,-122.419], 13);
 
-	var stamenLayer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'
-}).addTo(map);
+	var stamenLayer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png', {attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'}).addTo(map);
 
 
-		// adds the json to the map layer from route.js
-		
+	// adds the GeoJson to the map layer from route.js
 	map.featureLayer.setGeoJSON(geoJson_features);
 
 	
@@ -35,6 +32,7 @@ function initialize_map(){
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
 
+		$('#welcome').slideUp(1000);
 		// ajax call to the checkins method. Passes in the marker ID from the clicked marker
 		// ajax call returns the location data based on the ID of that location   
 		// the .done says: once the ajax call is completed append 'info' with its data 
@@ -64,8 +62,12 @@ function initialize_map(){
 	    // iterate thru checkins object in the DB, grab the i element of checkins.name & append to site-1
 	    	for (var i = 0; i < checkins.length; i++) {
 	        $('#site-1').append('<p><b>' + checkins[i].name + '<b><p>');
-	        $('#site-1').append('<p>' + checkins[i].comment + '<p>');
+	        $('#site-1').append('<p>' + checkins[i].comment + '<p><br>');
 	      } 
+
+		  //   $('.submit_button').on('click', function(){
+		  //   	$('#entry_form').fadeOut('slow');
+				// });
 
 			} // ends append to site-1
 		}) // ends ajax 

@@ -23,10 +23,10 @@ html, body {
 	font-size: 25px;
 }
 
-.the_guestbook {
+/*.the_guestbook {
 	text-align: center; 
 	letter-spacing: 5px;
-}
+}*/
 
 #map { 
 	float: left;
@@ -55,8 +55,8 @@ html, body {
 	position: relative;
 	background-color: rgba(0,0,0,0.8);
 	color: #fff;
-	font-size: 24px;
-	padding: 0px 10px 10px 10px;
+	font-size: 20px;
+	padding: 0px 10px 30px 10px;
 	width: 30%;
 	height: 100%;
 	overflow: auto;
@@ -95,6 +95,20 @@ html, body {
 #name, #comment {
 	color: #000;
 	font-size: 17px;
+	width: 100%;
+}
+
+#welcome {
+	text-align: center;
+	margin: 100px 10px 10px 10px;
+	font-size: 22px;
+}
+
+#entry_form {
+	margin: 10px;
+}
+
+.addPhotoButton {
 	width: 100%;
 }
 
