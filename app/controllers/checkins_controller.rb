@@ -14,7 +14,6 @@ class CheckinsController < ApplicationController
       else
         flash.now[:notice] = "Name field can't be blank."
         redirect_to checkins_path
-          # binding.pry
 
       end
 

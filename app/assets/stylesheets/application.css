@@ -45,7 +45,7 @@ html, body {
 
 .map_div {
 	float: left;
-	width: 75%;
+	width: 70%;
 	height: 100%;
 	padding: 0;
 }
@@ -56,8 +56,8 @@ html, body {
 	background-color: rgba(0,0,0,0.8);
 	color: #fff;
 	font-size: 24px;
-	padding: 10px;
-	width: 25%;
+	padding: 0px 10px 10px 10px;
+	width: 30%;
 	height: 100%;
 	overflow: auto;
 }
@@ -67,9 +67,6 @@ html, body {
 }
 
 #site-1 {
-	/*border: 2px solid black;*/
-	/*background-color: lightgray;*/
-	/*border-radius: 8px;*/
 	color: #fff;
 	height: 68%;
 	width: 100%;
@@ -77,21 +74,27 @@ html, body {
 	padding: 15px;
 }
 
+.site1_title {
+	font-size: 30px;
+	letter-spacing: 8px;
+}
+
+.site1_desc {
+	font-size: 22px;
+	letter-spacing: 3px;
+}
+
 .about_modal, .howitworks_modal {
 	cursor: pointer;
 }
 
-.site1_title {
-	
+#name {
+	height: 30px;
 }
-
-.site1_desc {
-
-}
-
 
 #name, #comment {
 	color: #000;
+	font-size: 17px;
 }
 
 @media (max-width: 767px) {

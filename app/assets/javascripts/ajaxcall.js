@@ -5,6 +5,9 @@ $(function(){
 function ajax(){
 	$('body').on('submit', '#checkin_form', function(event){	
 		event.preventDefault();
+		var comment_content = $('#comment').val()
+		comment = comment_content.replace('\n', '<br>');
+		comment = comment_content.replace('\n\n', '<br><br>');
 
 		// creates a hash called 'checkin' with name, comment and location_id 
 		// for the ajax call that the controller can parse
@@ -12,7 +15,7 @@ function ajax(){
 			checkin:
 			{
 				name: $('#name').val(),
-				comment: $('#comment').val(),
+				comment: comment, // see above for variable content
 				location_id: $('#location_id').val()
 			}
 		};

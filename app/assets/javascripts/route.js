@@ -1267,8 +1267,6 @@ var geoJson_features = [
             ]
           ]
         },
-      properties: {
-        // 'color': '#548cba'
-      }
+      properties: {}
     }
 ];
