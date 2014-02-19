@@ -21,19 +21,20 @@ function initialize_map(){
 		// adds the json to the map layer from route.js
 	map.featureLayer.setGeoJSON(geoJson_features);
 
-	map.featureLayer.eachLayer(function(layer){
+	// removed the form on the popup feature from here 
+	// map.featureLayer.eachLayer(function(layer){
 
-		if (layer.feature.properties.title != undefined ) { 
+	// 	if (layer.feature.properties.title != undefined ) { 
 
-			// passes the form to a jst template
-			var popupContent = JST['templates/popupForm'](layer);
+	// 		// passes the form to a jst template
+	// 		var popupContent = JST['templates/popupForm'](layer);
 
-			layer.bindPopup(popupContent,{ 
-				closeButton: true, 
-				minWidth: 320 
-			}); 
-		}
-	})
+	// 		layer.bindPopup(popupContent,{ 
+	// 			closeButton: true, 
+	// 			minWidth: 320 
+	// 		}); 
+	// 	}
+	// })
 
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
@@ -48,6 +49,12 @@ function initialize_map(){
 
 	    var info = '<p class="site1_title"><b>' + feature.properties.title + '<b></p>' +
 	               '<p class="site1_desc">' + feature.properties.description + '</p>'
+	      
+	    document.getElementById('entry_form').innerHTML='';
+	      
+	     // add form to sidebar
+	    var formContent = JST['templates/popupForm'](e.layer);
+	    $('#entry_form').append(formContent);
 	      
 	      /// check this conditional for undefined info!!!!
 			if (feature.properties.title != undefined) { 

@@ -59,6 +59,7 @@ html, body {
 	padding: 10px;
 	width: 25%;
 	height: 100%;
+	overflow: auto;
 }
 
 #site-title{
@@ -74,7 +75,6 @@ html, body {
 	width: 100%;
 	margin: 5px;
 	padding: 15px;
-	overflow: auto;
 }
 
 .about_modal, .howitworks_modal {
@@ -89,6 +89,10 @@ html, body {
 
 }
 
+
+#name, #comment {
+	color: #000;
+}
 
 @media (max-width: 767px) {
 
