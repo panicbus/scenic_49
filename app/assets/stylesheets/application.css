@@ -17,10 +17,24 @@ html, body {
   padding: 0; 
   height: 100%;
   width: 100%;
+  /*font-family: 'Josefin Sans', sans-serif;*/
+  font-family: 'Varela Round', sans-serif;
+}
+
+a:hover {
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.navbar {
+	color: white;
 }
 
 .navbar-brand {
 	font-size: 25px;
+	font-family: 'Poller One', cursive;
 }
 
 .nav_bird {
@@ -29,16 +43,16 @@ html, body {
 	float: left;
 	margin: -7px -4px 0px -3px;
 	border-radius: 3px;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+
+
 }
 
 .nav_bird:hover {
-	opacity: 0.6;
+	opacity: 0.5;
 }
-
-/*.the_guestbook {
-	text-align: center; 
-	letter-spacing: 5px;
-}*/
 
 #map { 
 	float: left;
