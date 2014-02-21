@@ -23,6 +23,18 @@ html, body {
 	font-size: 25px;
 }
 
+.nav_bird {
+	width: 30px;
+	height: auto;
+	float: left;
+	margin: -7px -4px 0px -3px;
+	border-radius: 3px;
+}
+
+.nav_bird:hover {
+	opacity: 0.6;
+}
+
 /*.the_guestbook {
 	text-align: center; 
 	letter-spacing: 5px;
@@ -60,6 +72,26 @@ html, body {
 	width: 30%;
 	height: 100%;
 	overflow: auto;
+	border: 0;
+}
+
+#form_and_site1 {
+	/*overflow: auto;*/
+}
+
+#welcome {
+	text-align: center;
+	margin: 40px 10px 10px 10px;
+	font-size: 22px;
+}
+
+.bird_on_it {
+	width: 50%;
+	height: auto;
+	display: block;
+  margin: 0 auto;
+  padding: 0 0 15px 0;
+  border-radius: 4px;
 }
 
 #site-title{
@@ -72,6 +104,11 @@ html, body {
 	width: 100%;
 	margin: 5px;
 	padding: 15px;
+	overflow: scroll;
+}
+
+hr {
+	margin: 15px 0 0 0;
 }
 
 .site1_title {
@@ -88,6 +125,7 @@ html, body {
 	cursor: pointer;
 }
 
+/*The form*/
 #name {
 	height: 30px;
 }
@@ -98,12 +136,6 @@ html, body {
 	width: 100%;
 }
 
-#welcome {
-	text-align: center;
-	margin: 100px 10px 10px 10px;
-	font-size: 22px;
-}
-
 #entry_form {
 	margin: 10px;
 }
@@ -111,11 +143,31 @@ html, body {
 .addPhotoButton {
 	width: 100%;
 }
+/*end form style*/
+
+
 
 @media (max-width: 767px) {
 
 	h2 {
 		font-size: 24px;
+	}
+
+	#welcome {
+		position: fixed;
+		margin: 10px 10px 10px 10px;
+		font-size: 15px;
+	}
+
+	.bird_on_it {
+		width: 100px;
+		height: auto;
+		float: left;
+	  margin: 25px 5px 15px 10px;
+	}
+
+	.nav_bird {
+		margin: 7px -8px 0px 8px;
 	}
 
 	.the_guestbook, hr {

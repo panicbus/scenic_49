@@ -6,7 +6,7 @@ function ajax(){
 	$('body').on('submit', '#checkin_form', function(event){	
 		event.preventDefault();
 
-		// to keep line breaks in comments (.replace == gsub)
+		// to keep line breaks in comments (.replace == gsub)	
 		var comment_content = $('#comment').val()
 		comment = comment_content.replace('\n', '<br>');
 		comment = comment_content.replace('\n\n', '<br><br>');
