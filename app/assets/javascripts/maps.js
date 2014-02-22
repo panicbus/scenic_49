@@ -34,6 +34,8 @@ function initialize_map(){
 
 		$('#welcome').slideUp(1000);
 
+
+
 		// ajax call to the checkins method. Passes in the marker ID from the clicked marker
 		// ajax call returns the location data based on the ID of that location   
 		// the .done says: once the ajax call is completed append 'info' with its data 
@@ -68,8 +70,11 @@ function initialize_map(){
 	        $('#site-1').append('<p>' + checkins[i].comment + '<p><br>');
 	      } 
 
+
+		    $('#entry_form').fadeIn('slow');
+
 	      // hides the form after submitting
-		    $('.submit_button').on('click', function(){
+		    $('#entry_form').on('submit', function(){
 		    	$('#entry_form').fadeOut('slow');
 				});
 

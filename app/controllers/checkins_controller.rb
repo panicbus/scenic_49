@@ -6,7 +6,7 @@ class CheckinsController < ApplicationController
   end
 
   def create
-    checkin = Checkin.create(params[:checkin])
+    checkin = Checkin.create(checkin_params)
 
       if checkin.errors.empty?
         render json: checkin, status: 201,
@@ -16,25 +16,6 @@ class CheckinsController < ApplicationController
         redirect_to checkins_path
 
       end
-
-      # if @checkin.save
-      #    render json: @checkin, status: 201, notice: "Yay!"
-      # else
-      #   redirect_to checkins_path, notice: "Nope"
-      # end
-
-      # respond_to do |format|
-      #   format.html {
-      #     if success 
-      #       flash[:success] = message
-      #       render json: @checkin, status: 201
-      #     else  
-      #       flash[:errors] = message
-      #       redirect_to checkins_path
-      #     end
-      #   }
-      #   format.json { render :json => { :success => success, :message => message }.to_json }
-      # end 
 
   end
 
@@ -53,4 +34,11 @@ class CheckinsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def checkin_params
+    params.require(:friend).permit(:photo, :name, :comment, :location_id)    
+  end
+
 end

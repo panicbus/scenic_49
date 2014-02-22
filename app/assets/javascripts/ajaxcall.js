@@ -18,6 +18,7 @@ function ajax(){
 			{
 				name: $('#name').val(),
 				comment: comment, // see above for variable content
+				photo: $('#photo').val(),
 				location_id: $('#location_id').val()
 			}
 		};
