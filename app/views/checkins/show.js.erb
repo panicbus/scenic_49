@@ -1,0 +1,11 @@
+if($('#welcome').is(':visible')) {
+  $('#welcome').slideUp(1000, function() {
+    $('.content_div').html("<%= escape_javascript(render 'show') %>");
+  });
+} else if($('#created_container').is(':visible')) {
+  $('#created_container').slideUp(1000, function() {
+    $('.content_div').html("<%= escape_javascript(render 'show') %>");
+  });
+} else {
+  $('.content_div').html("<%= escape_javascript(render 'show') %>");
+}

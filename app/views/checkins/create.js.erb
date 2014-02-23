@@ -1,0 +1,3 @@
+$('.content_container').slideUp(1000, function() {
+  $('.content_div').html("<%= escape_javascript(render 'create') %>");
+});
