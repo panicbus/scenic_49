@@ -144,11 +144,18 @@ hr {
 	height: 30px;
 }
 
-#name, #comment {
+#new_checkin input, 
+#new_checkin textarea {
 	color: #000;
 	font-size: 17px;
 	width: 100%;
 }
+
+#new_checkin #checkin_photo {
+ 	color: #FFF;
+ 	font-size: 17px;
+ 	width: 100%;
+ }
 
 #entry_form {
 	margin: 10px;
