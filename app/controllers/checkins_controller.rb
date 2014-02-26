@@ -6,7 +6,7 @@ class CheckinsController < ApplicationController
   end
 
   def create
-    checkin = Checkin.create(checkin_params)
+    checkin = Checkin.create(params[:checkin])
 
       if checkin.errors.empty?
         render json: checkin, status: 201,
@@ -35,10 +35,10 @@ class CheckinsController < ApplicationController
   def destroy
   end
 
-  private
+  # private
 
-  def checkin_params
-    params.require(:friend).permit(:photo, :name, :comment, :location_id)    
-  end
+  # def checkin_params
+  #   params.require(:friend).permit(:photo, :name, :comment, :location_id)    
+  # end
 
 end
