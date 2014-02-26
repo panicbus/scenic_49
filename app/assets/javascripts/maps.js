@@ -14,78 +14,12 @@ function initialize_map(){
 	map.featureLayer.setGeoJSON(geoJson_features);
 
 	
-	// removed the form on the popup feature from here 
-	// map.featureLayer.eachLayer(function(layer){
-
-	// 	if (layer.feature.properties.title != undefined ) { 
-
-	// 		// passes the form to a jst template
-	// 		var popupContent = JST['templates/popupForm'](layer);
-
-	// 		layer.bindPopup(popupContent,{ 
-	// 			closeButton: true, 
-	// 			minWidth: 320 
-	// 		}); 
-	// 	}
-	// })
-
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
-
-		$('#welcome').slideUp(1000);
-
-
-
-		// ajax call to the checkins method. Passes in the marker ID from the clicked marker
-		// ajax call returns the location data based on the ID of that location   
-		// the .done says: once the ajax call is completed append 'info' with its data 
-		$.get("/checkins/" + e.layer.feature.properties.location_id, e.layer.feature.properties.location_id)
-			.done(function(checkins){
-
-	    var feature = e.layer.feature;
-
-	    var info = '<p class="site1_title"><b>' + feature.properties.title + '<b></p>' +
-	               '<p class="site1_desc">' + feature.properties.description + '</p><hr>'
-	    
-	    // prevent duplicate form after ajax request by clearing entry_form div  
-	    document.getElementById('entry_form').innerHTML='';
-	      
-	     // add form to sidebar  ---- AFTER HIKE IS OVER REMOVE NEXT TWO LINES --------
-	    var formContent = JST['templates/popupForm'](e.layer);
-	    $('#entry_form').append(formContent);
-	      /// --------------
-
-	      // protects guestbook from 'undefined' if submit is clicked with blank name field
-			if (feature.properties.title != undefined) { 
-
-	    	$('#site-title').empty(); // then empties site-title div
-	    	$('#site-title').append(info); // and adds title & desc to it
-
-				// when a marker is clicked takes site-1 and replaces it with ''
-	    	document.getElementById('site-1').innerHTML = ' ';
-
-	    // iterate thru checkins object in the DB, grab the i element of checkins.name & append to site-1
-	    	for (var i = 0; i < checkins.length; i++) {
-	        $('#site-1').append('<p><b>' + checkins[i].name + '<b><p>');
-	        $('#site-1').append('<p>' + checkins[i].comment + '<p><br>');
-	      } 
-
-
-		    $('#entry_form').fadeIn('slow');
-
-	      // hides the form after submitting
-		    $('#entry_form').on('submit', function(){
-		    	$('#entry_form').fadeOut('slow');
-				});
-
-			} // ends append to site-1
-		}) // ends ajax 
+		$.get("/checkins/" + e.layer.feature.properties.location_id, e.layer.feature.properties.location_id);
 	});
 
 	// Closes the marker popup when map is clicked
 	map.on('click',function(e){ });
 
-
 };
-
-

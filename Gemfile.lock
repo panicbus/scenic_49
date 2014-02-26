@@ -147,7 +147,7 @@ DEPENDENCIES
   pg
   pry-rails
   rails (= 3.2.16)
-  remotipart (~> 1.0)
+  remotipart
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
