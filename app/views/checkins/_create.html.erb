@@ -13,8 +13,7 @@
   <br>
 	<%= @checkin.name %> <br>
 	<%= @checkin.comment %><br> 
-	<% if !image_tag == "missing" %>
 		<%= image_tag @checkin.photo.url(:medium) %><br>
-	<% end %>
+
 </div>
 
