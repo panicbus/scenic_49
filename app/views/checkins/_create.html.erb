@@ -1,4 +1,24 @@
 <div id="created_container">
-  <h1>Checkins#create</h1>
-  <p>Find me in app/views/checkins/_create.html.erb</p>
+  <p class="site1_title">
+     <b>
+       <%= @location.name %>
+     </b>
+  </p>
+  <p class="site1_desc">
+    <b>
+      <%= @location.description %>
+   	</b>
+  </p>
+  <hr>
+  <br>
+	<%= @checkin.name %> <br>
+	<%= @checkin.comment %><br> 
+	<% if !image_tag == "missing" %>
+		<%= image_tag @checkin.photo.url(:medium) %><br>
+	<% end %>
 </div>
+
+
+
+
+

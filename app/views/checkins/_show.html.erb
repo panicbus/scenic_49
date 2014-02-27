@@ -12,4 +12,15 @@
   <hr/>
 
   <%= render 'form' %>
+  <div id="site-1">
+    <% @location.checkins.each do |f| %> 
+      <b><%= f.name %><b><br>
+         <%= f.comment %><br>
+         
+           <%= image_tag f.photo.url(:medium) %><br><br>
+         
+      <% end %>
+  </div>
 </div>
+ 
+ <!-- THIS IS THE SAME AS _form_container.html.erb -->
