@@ -13,7 +13,9 @@
   <br>
 	<%= @checkin.name %> <br>
 	<%= @checkin.comment %><br> 
+	<% if @checkin.photo.present? %>
 		<%= image_tag @checkin.photo.url(:medium) %><br>
-
+	<% end %>
 </div>
 
+<!-- this does not do anything -->
