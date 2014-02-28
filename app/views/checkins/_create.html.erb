@@ -1,21 +1,25 @@
 <div id="created_container">
-  <p class="site1_title">
-     <b>
-       <%= @location.name %>
-     </b>
-  </p>
-  <p class="site1_desc">
-    <b>
-      <%= @location.description %>
-   	</b>
-  </p>
+  <div class="created_container_header">
+    <p class="site1_title">
+       <b>
+         <%= @location.name %>
+       </b>
+    </p>
+    <p class="site1_desc">
+      <b>
+        <%= @location.description %>
+     	</b>
+    </p>
+  </div>
   <hr>
   <br>
-	<%= @checkin.name %> <br>
-	<%= @checkin.comment %><br> 
-	<% if @checkin.photo.present? %>
-		<%= image_tag @checkin.photo.url(:medium) %><br>
-	<% end %>
+  <div class="site-1">
+  	<%= @checkin.name %> <br>
+  	<%= @checkin.comment %><br> 
+  	<% if @checkin.photo.present? %>
+  		<%= image_tag @checkin.photo.url(:medium) %><br>
+  	<% end %>
+  </div>
 </div>
 
 <!-- this does not do anything -->

@@ -1,13 +1,11 @@
 <%= form_for(@checkin, multipart: true, remote: true) do |f| %>
   <% if @checkin.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@checkin.errors.count, "error") %> kept your checkin from being saved:</h2>
-
-      <ul>
+    <div style="color:red" id="error_explanation">
+      <p>Your check-in didn't save:</p>
       <% @checkin.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li><%= msg %></li><br>
       <% end %>
-      </ul>
+      
     </div>
   <% end %>
 

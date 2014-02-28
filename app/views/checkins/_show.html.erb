@@ -1,4 +1,4 @@
-<div class="content_container">
+<div class="content_header">
   <p class="site1_title">
     <b>
       <%= @location.name %>
@@ -10,17 +10,19 @@
     </b>
   </p>
   <hr/>
+</div>
 
+<div id="site-1">
   <%= render 'form' %>
-  <div id="site-1">
-    <% @location.checkins.each do |f| %> 
-      <b><%= f.name %><b><br>
-         <%= f.comment %><br>
-          <% if f.photo.present? %>
-           <%= image_tag f.photo.url(:medium) %><br><br>
-          <% end %>
-    <% end %>
-  </div>
+  <br>
+  <% @location.checkins.each do |f| %> 
+    <b><%= f.name %><b><br>
+       <%= f.comment %><br>
+        <% if f.photo.present? %>
+         <%= image_tag f.photo.url(:medium) %><br>
+        <% end %>
+    <br>
+  <% end %>
 </div>
  
  <!-- THIS IS THE SAME AS _form_container.html.erb -->
