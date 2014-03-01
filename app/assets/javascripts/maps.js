@@ -17,7 +17,15 @@ function initialize_map(){
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
 		$.get("/checkins/" + e.layer.feature.properties.location_id, e.layer.feature.properties.location_id);
+	
+		$('.content_div').addClass('enbiggen');
+
 	});
+
+	$('body').on('click', '#back_button', function(){
+		$('.content_div').removeClass('enbiggen');
+		$('#back_button').hide();
+	})
 
 	// Closes the marker popup when map is clicked
 	map.on('click',function(e){ });
