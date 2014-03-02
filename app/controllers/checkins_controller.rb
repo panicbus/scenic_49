@@ -27,7 +27,7 @@ class CheckinsController < ApplicationController
     @checkin = Checkin.new
 
     respond_to do |format|
-      format.js
+      format.js 
       #format.html  ## TODO: Probably good for browers that don't have JS enabled - CW 2/23/14
     end
   end

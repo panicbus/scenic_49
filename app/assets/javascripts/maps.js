@@ -16,7 +16,7 @@ function initialize_map(){
 	
 	// this is the marker click listener 
 	map.featureLayer.on('click',function(e) {
-		$.get("/checkins/" + e.layer.feature.properties.location_id, e.layer.feature.properties.location_id);
+		$.get("/checkins/" + e.layer.feature.properties.location_id); // fyi this used to have another ,e.layer.etc
 	
 		$('.content_div').addClass('enbiggen');
 
