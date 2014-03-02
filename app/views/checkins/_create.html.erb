@@ -20,6 +20,7 @@
   	<% if @checkin.photo.present? %>
   		<%= image_tag @checkin.photo.url(:medium) %><br>
   	<% end %>
+    <span style="font-size:12px">&#149;<%= @checkin.created_at.strftime("%b %e, %Y %l:%M %p") %></span><br>
   </div>
 </div>
 

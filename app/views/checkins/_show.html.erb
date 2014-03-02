@@ -15,14 +15,15 @@
 
 <div id="site-1">
   <%= render 'form' %>
-  
+
   <br>
   <% @location.checkins.each do |f| %> 
     <b><%= f.name %><b><br>
        <%= f.comment %><br>
-        <% if f.photo.present? %>
+       <% if f.photo.present? %>
          <%= image_tag f.photo.url(:medium) %><br>
-        <% end %>
+       <% end %>
+       <span style="font-size:12px">&#149;<%= f.created_at.strftime("%b %e, %Y %l:%M %p") %></span><br>
     <br>
   <% end %>
 </div>

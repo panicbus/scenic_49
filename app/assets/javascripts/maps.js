@@ -19,7 +19,7 @@ function initialize_map(){
 		$.get("/checkins/" + e.layer.feature.properties.location_id); // fyi this used to have another ,e.layer.etc
 		
 		// fills the mobile view with class for content_div
-		$('.content_div').animate({height:"92%"}, 1000);
+		$('.content_div').animate({height:"100%"}, 1000);
 		$('#back_button').fadeIn('slow');
 	});
 
