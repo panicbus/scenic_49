@@ -20,7 +20,7 @@ function initialize_map(){
 		
 		// fills the mobile view with class for content_div
 		$('.content_div').animate({height:"100%"}, 1000);
-		$('#back_button').fadeIn('slow');
+		$('#back_button').fadeIn();
 	});
 
 	$('body').on('click', '#back_button', function(){

@@ -144,6 +144,10 @@ hr {
 	width: 100%;
 }
 
+#submit_button {
+	margin-top: 4px;
+}
+
 #new_checkin #checkin_photo {
 	color: #FFF;
 	font-size: 17px;

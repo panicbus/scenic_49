@@ -19,7 +19,7 @@
   <br>
   <% @location.checkins.each do |f| %> 
     <b><%= f.name %><b><br>
-       <%= f.comment %><br>
+       <%= simple_format(f.comment) %><br>
        <% if f.photo.present? %>
          <%= image_tag f.photo.url(:medium) %><br>
        <% end %>

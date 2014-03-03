@@ -2,6 +2,7 @@ $(document).ready(function(){
 
 	$('.drop1').on('click',function(e) {
 		$.get("/checkins/1"); 
+		// $('.content_div').css({height:"100%"});
 		$('.content_div').addClass('enbiggen');
 		$('.navbar-toggle').click();
 	});
