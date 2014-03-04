@@ -24,7 +24,7 @@ function initialize_map(){
 	});
 
 	$('body').on('click', '#back_button', function(){
-		$('.content_div').animate({height:"35%"}, 1000);
+		$('.content_div').animate({height:"30%"}, 1000);
 		$('#back_button').fadeOut();
 	})
 

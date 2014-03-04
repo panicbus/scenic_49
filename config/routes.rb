@@ -9,5 +9,6 @@ Scenic49::Application.routes.draw do
   get "walks/show"
 
   get "checkins/findLocation" => "checkins#findLocation"
+  # get "checkins/all_checkins"
 
 end

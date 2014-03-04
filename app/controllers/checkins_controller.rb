@@ -10,6 +10,7 @@ class CheckinsController < ApplicationController
     @checkin = Checkin.new(params[:checkin])
 
     if @checkin.save
+      flash[:notice] = 'Your check-in was successfully saved!'
       respond_to do |format|
         format.js
         #format.html  ## TODO: Probably good for browers that don't have JS enabled - CW 2/23/14
