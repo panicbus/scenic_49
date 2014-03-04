@@ -139,10 +139,8 @@ var geoJson_features = [
 
 ////// the route linestring starts here ///////
 {
-  type: "Feature",
-  geometry: {
-    type: "LineString",
-    coordinates: [
+  "geometry": {
+    "coordinates": [
       [
       -122.42674827575682,
       37.76786513360663
@@ -1283,8 +1281,14 @@ var geoJson_features = [
               -122.42674827575682,
               37.76786513360663
             ]
-          ]
+          ],
+          "type": "LineString"
         },
-      properties: {}
+      "properties": {
+        "stroke": "#000",
+        "stroke-opacity": 1,
+        "stroke-width": 3
+      },
+       type: "Feature"
     }
 ];
