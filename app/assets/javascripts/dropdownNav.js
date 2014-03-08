@@ -6,7 +6,7 @@ var mq = window.matchMedia( "(min-width: 767px)" ); // protects nav from togglin
 		$.get("/checkins/1"); 
 		$('.content_div').animate({height:"100%"}, 1000);
 		$('#back_button').fadeIn();
-		if (!mq.matches){   // if it's screen size > 767 aka mq
+		if (!mq.matches){   // if the screen size is > 767 (javascript media query)
 			$('.navbar-toggle').click();
 		}
 	});

@@ -13,7 +13,6 @@ class CheckinsController < ApplicationController
       flash[:notice] = 'Your check-in was successfully saved!'
       respond_to do |format|
         format.js
-        #format.html  ## TODO: Probably good for browers that don't have JS enabled - CW 2/23/14
       end
     else
       respond_to do |format|
@@ -29,8 +28,15 @@ class CheckinsController < ApplicationController
 
     respond_to do |format|
       format.js 
-      #format.html  ## TODO: Probably good for browers that don't have JS enabled - CW 2/23/14
     end
+  end
+
+  def all_checkins
+    @all_checkins = Checkin.all
+    respond_to do |format|
+      format.json { render json: @all_checkins}
+      format.html
+    end    
   end
 
   def edit

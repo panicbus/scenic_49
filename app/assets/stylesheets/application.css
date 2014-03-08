@@ -214,9 +214,10 @@ hr {
 		display: none;
 	}
 
-	#site-1 {
+	.site-1 {
 		width: 100%;
 		font-size: 20px;
+		margin: 0px 20px 0 20px;
 	}
 
 	.content_div {

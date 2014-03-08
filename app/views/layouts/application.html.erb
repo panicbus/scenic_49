@@ -56,7 +56,7 @@
             <li class="divider"></li>
             <li><a href="#">All Stations</a></li>
           </ul>
-      <li><a class="seeall" href="/checkins">All the check-ins</a></li>
+      <li><%= link_to "All the checkins", "/all_checkins" %></li>
         </li>
       </ul>
       
@@ -67,27 +67,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class='main_container'>
-        
-	<div class='map_div'>
-
-	<!-- 	this is the main map area -->	
-		<div id='map'> </div>
-  <!-- end of map area     -->
-		<%= yield %>
-	</div>
-
-	<div class="content_div">
-
-    <!-- this is the welcome note, hidden on first location click -->
-    <div id="welcome">
-      <img class="bird_on_it" src="assets/bird_on_it.jpg"> 
-      <p style="font-size: 30px; letter-spacing: 5px">Welcome to the Scenic 49 Project</p>
-      <p>Thanks for coming!</p>
-      <p>Click on the marker where you're located to enter your name and comment.</p> 
-    </div>
-	</div>
-</div>
+<%= yield %>
 
 <!-- Modal 1 - How It Works -->
 <div class="modal fade" id="howItWorksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
