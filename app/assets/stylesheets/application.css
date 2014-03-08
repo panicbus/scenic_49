@@ -52,6 +52,17 @@ a:hover {
 	opacity: 0.5;
 }
 
+/*navbar stations dropdown on hover instead of click////
+.dropdown-menu li:hover .sub-menu {
+	visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/////end navbar hover action//////
+*/
+
 #map { 
 	float: left;
   position: absolute;
@@ -217,10 +228,10 @@ hr {
 		z-index: 1000;
 	}
 
-	.enbiggen {
+/*	.enbiggen {
 		top: 50px;
 		height: 100%;
-	}
+	}*/
 
 	#back_button {
 		background-color: #16a085;
