@@ -231,7 +231,8 @@ hr {
 
 #each_one img {
 	border-radius: 10px;
-	width: auto;
+	width: 100%;
+	height: auto;
 }
 
 .allcheckins_container {
@@ -351,5 +352,18 @@ hr {
 		/*margin: 12px 5px 10px 20px;*/
 		margin: 50px 5px 10px 20px;
 	}
+
+	#each_one {
+		margin: 9px;
+		padding: 9px;
+		width: auto;
+		font-size: 20px;
+	}
+
+	#each_one img {
+		width: 100%;
+		height: auto;
+	}
+
 
 }
