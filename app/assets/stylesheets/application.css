@@ -115,6 +115,11 @@ a:hover {
 	overflow: scroll;
 }
 
+#site-1 img {
+	width: 100%;
+	height: auto;
+}
+
 hr {
 	margin: 15px 0 0 0;
 }
@@ -220,7 +225,6 @@ hr {
 }
 
 #each_one {
-	border: 2px solid black;
 	margin: 11px;
 	padding: 10px;
 	background-color: gray;
