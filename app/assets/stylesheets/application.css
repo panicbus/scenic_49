@@ -52,17 +52,6 @@ a:hover {
 	opacity: 0.5;
 }
 
-/*navbar stations dropdown on hover instead of click////
-.dropdown-menu li:hover .sub-menu {
-	visibility: visible;
-}
-
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-/////end navbar hover action//////
-*/
-
 #map { 
 	float: left;
   position: absolute;
@@ -186,6 +175,20 @@ hr {
 	font-size: 17px;
 	text-align: center;
 }
+
+.checkin_item {
+	border: 2px solid black;
+	background-color: red;
+	margin: 5px;
+}
+
+.masonry_locations {
+	border: 3px dotted blue;
+	background-color: lightblue;
+	margin: 5px;
+}
+
+
 
 @media (max-width: 767px) {
 

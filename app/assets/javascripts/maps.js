@@ -1,5 +1,7 @@
 $(function(){
-	initialize_map();
+	if($('#map').length > 0){
+		initialize_map();
+	}
 });
 
 

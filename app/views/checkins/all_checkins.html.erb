@@ -1,14 +1,29 @@
-<div class="allCheckins">
+<br><br><br>
   <p>All the checkins.</p>
   <p>Like, all of them.</p>
   <br>
-    <% @all_checkins.each do |f| %> 
-    <%= f.name %><br>
-    <%= simple_format(f.comment) %>
-      <% if f.photo.present? %>
-       <%= image_tag f.photo.url(:medium) %><br>
-      <% end %>
-    <% end %>
-    <br>
-  <a href="/">Go back to main map</a>
+
+<div id="allCheckins">
+	<div id="checkin_locations">
+    <% @locations.each do |location| %>	
+    	<div id="<%= location.name %>" class="checkin_item">
+    	<%= location.name %> 
+    	<%= location.description %>
+    		<% @all_checkins.each do |checkin| %> 
+    			<% if checkin.location.id == location.id %>
+    				<div >
+	    		 		<%=checkin.name%>	
+	    		 	  <%= simple_format(checkin.comment) %>
+			      	<% if checkin.photo.present? %>
+			       		<%= image_tag checkin.photo.url(:medium) %><br>
+			      	<% end %>
+    		 		</div>
+    		  <%end%>
+    		<%end%>
+<!-- ends checkin loop -->
+    	</div>   	
+    <% end %> <!-- ends location loop --> 	
+  </div>
 </div>
+
+<a href="/">Go back to main map</a>
