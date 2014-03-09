@@ -176,17 +176,47 @@ hr {
 	text-align: center;
 }
 
-.checkin_item {
-	border: 2px solid black;
-	background-color: red;
-	margin: 5px;
+/*/////////all isotope css//////////*/
+
+.allCheckins {
+	border: 2px solid red;
+/*	margin-left: auto;
+	margin-right: auto;
+*/	height: 80%;
+width: 100%;
 }
 
-.masonry_locations {
-	border: 3px dotted blue;
-	background-color: lightblue;
-	margin: 5px;
+#test {
+	border: 2px solid green;
+
 }
+
+.isotope-item {
+    z-index: 2;
+}
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+}
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+/* ////end isotope/// */
 
 
 

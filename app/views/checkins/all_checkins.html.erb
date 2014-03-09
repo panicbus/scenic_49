@@ -3,27 +3,39 @@
   <p>Like, all of them.</p>
   <br>
 
-<div id="allCheckins">
-	<div id="checkin_locations">
-    <% @locations.each do |location| %>	
-    	<div id="<%= location.name %>" class="checkin_item">
-    	<%= location.name %> 
-    	<%= location.description %>
-    		<% @all_checkins.each do |checkin| %> 
-    			<% if checkin.location.id == location.id %>
-    				<div >
-	    		 		<%=checkin.name%>	
-	    		 	  <%= simple_format(checkin.comment) %>
-			      	<% if checkin.photo.present? %>
-			       		<%= image_tag checkin.photo.url(:medium) %><br>
-			      	<% end %>
-    		 		</div>
-    		  <%end%>
-    		<%end%>
-<!-- ends checkin loop -->
-    	</div>   	
-    <% end %> <!-- ends location loop --> 	
+<div class="allCheckins_filter">
+
+  <div id="locations_links">
+    <a href="#" data-filter=".all" class="current">See all the checkins</a><br>
+    <% @locations.each do |location| %>
+      <a href="#" data-filter=".<%= (location.name.gsub(/\s+/,"")).downcase %>"><%= location.name %> </a>
+    <% end %>
   </div>
+
+</div>
+
+<div class="allCheckins">
+  <% @all_checkins.each do |checkin| %> 
+  <div id="test" class= 'all'>
+    <%= checkin.name %>
+    <%= simple_format(checkin.comment) %>
+    <% if checkin.photo.present? %>
+      <%= image_tag checkin.photo.url(:medium) %><br>
+    <% end %>
+  </div>
+  <%end%>
+  
+
+	<% @all_checkins.each do |checkin| %> 
+		<div id="test" class="<%= (checkin.location.name.gsub(/\s+/,"")).downcase %>">
+	 		<%= checkin.name %>
+	 	  <%= simple_format(checkin.comment) %>
+    	<% if checkin.photo.present? %>
+     		<%= image_tag checkin.photo.url(:medium) %><br>
+    	<% end %>
+ 		</div>  
+  <% end %> <!-- ends checkin loop -->
+    	
 </div>
 
 <a href="/">Go back to main map</a>

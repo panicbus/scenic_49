@@ -1,6 +1,11 @@
 $(function(){
+	// for isotope call
+	// on pageload check to see if map div is on current page
+	// if so initialize map into #map div   
 	if($('#map').length > 0){
 		initialize_map();
+	} else {
+		isotope()
 	}
 });
 
