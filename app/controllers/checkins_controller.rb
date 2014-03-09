@@ -34,6 +34,7 @@ class CheckinsController < ApplicationController
   def all_checkins
     @all_checkins = Checkin.all
     @locations = Location.all
+    
     respond_to do |format|
       format.json { render json: @all_checkins}
       format.html

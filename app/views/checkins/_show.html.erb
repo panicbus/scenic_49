@@ -18,7 +18,7 @@
 
   <br>
   <% @location.checkins.each do |f| %> 
-    <strong><%= f.name %></strong><br>
+    <span style="font-size:25px"><%= f.name %></span><br>
        <%= simple_format(f.comment) %>
        <% if f.photo.present? %>
          <%= image_tag f.photo.url(:medium) %><br>
