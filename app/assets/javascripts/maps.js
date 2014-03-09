@@ -4,8 +4,6 @@ $(window).load(function(){
 	// if so initialize map into #map div   
 	if($('#map').length > 0){
 		initialize_map();
-	} else {
-		isotope();
 	}
 });
 
@@ -43,5 +41,10 @@ function initialize_map(){
 
 	// Closes the marker popup when map is clicked
 	map.on('click',function(e){ });
+
+	$('body').on('click', "#submit_button", function(){
+		setTimeout(function(){$('.notice').addClass('notice_hide')},3000);
+	});
+	
 
 };

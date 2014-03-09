@@ -20,7 +20,7 @@
     <%= checkin.name %>
     <%= simple_format(checkin.comment) %>
     <% if checkin.photo.present? %>
-      <%= image_tag checkin.photo.url(:medium), :style => "" %><br>
+      <%= image_tag checkin.photo.url(:medium) %><br>
     <% end %>
   </div>
   <%end%>

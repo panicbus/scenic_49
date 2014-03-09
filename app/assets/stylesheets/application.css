@@ -176,6 +176,10 @@ hr {
 	text-align: center;
 }
 
+.notice_hide {
+	display: none;
+}
+
 /*/////////all isotope css//////////*/
 
 .allCheckins {
