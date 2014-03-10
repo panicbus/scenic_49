@@ -296,6 +296,11 @@ hr {
 	transition: all 0.4s ease;
 }
 
+.back_link, .back_link:hover {
+	font-size: 30px; 
+	margin-left: 40%; 
+	text-decoration: none;
+}
 
 @media (max-width: 767px) {
 
@@ -379,7 +384,6 @@ hr {
 
 	.content_header, .created_container_header {
 		text-align: left;
-		/*margin: 12px 5px 10px 20px;*/
 		margin: 50px 5px 10px 20px;
 	}
 
@@ -395,5 +399,10 @@ hr {
 		height: auto;
 	}
 
+	.back_link, .back_link:hover {
+		font-size: 24px; 
+		margin-left: 25%; 
+		text-decoration: none;
+	}
 
 }
