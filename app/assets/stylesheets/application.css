@@ -405,4 +405,12 @@ hr {
 		text-decoration: none;
 	}
 
+	.filter_links {
+		margin-left: 5%;
+	}
+
+	.filter_links_each {
+		margin-bottom: 10px;
+	}
+
 }
