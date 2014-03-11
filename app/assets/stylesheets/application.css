@@ -34,6 +34,7 @@ a:hover {
 
 .navbar-brand {
 	font-family: 'Poller One', cursive;
+
 }
 
 .nav_title {
@@ -328,12 +329,12 @@ hr {
 	}
 
 	.nav_title {
-		font-size: 20px;
-		margin: 6px 0 0 -35px;
+		font-size: 17px;
+		margin: 5px 0 0 0px;
 	}
 
 	.subtitle {
-		font-size: 14px;
+		font-size: 13px;
 	}
 
 	.nav_bird {
