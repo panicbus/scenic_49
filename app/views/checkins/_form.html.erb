@@ -15,11 +15,9 @@
     <%= f.text_field :name, placeholder: "What do they call you?" %>
   </div>
   <div class="field">           
-    <%= f.label :comment %>&nbsp;<a style="text-decoration:none;color:red" class="about_modal" data-toggle="modal" data-target="#commentModal">(?)</a>
+    <%= f.label :comment %>&nbsp;<a style="color:red" class="about_modal" data-toggle="modal" data-target="#commentModal">(?)</a>
 
-
-
-    <%= f.text_area :comment, cols: 40, rows: 2, placeholder: "What do you think? - Click the ? for help" %>
+    <%= f.text_area :comment, cols: 40, rows: 2, placeholder: "What do you think? - Click the ? for a tip" %>
   </div>
   <div class="field">
     <%= f.label :photo %>
