@@ -186,6 +186,11 @@ hr {
 }
 /*end form style*/
 
+.commentModal {
+	font-size: 20px;
+}
+
+
 #back_button {
 	display: none;
 	top: 3000px;
@@ -410,8 +415,5 @@ hr {
 		margin-left: 5%;
 	}
 
-	.filter_links_each {
-		margin-bottom: 10px;
-	}
 
 }

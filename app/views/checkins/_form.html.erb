@@ -14,9 +14,12 @@
     <%= f.label :name %>
     <%= f.text_field :name, placeholder: "What do they call you?" %>
   </div>
-  <div class="field">
-    <%= f.label :comment %>
-    <%= f.text_area :comment, cols: 40, rows: 2, placeholder: "What do you think?" %>
+  <div class="field">           
+    <%= f.label :comment %>&nbsp;<a style="text-decoration:none;color:red" class="about_modal" data-toggle="modal" data-target="#commentModal">(?)</a>
+
+
+
+    <%= f.text_area :comment, cols: 40, rows: 2, placeholder: "What do you think? - Click the ? for help" %>
   </div>
   <div class="field">
     <%= f.label :photo %>
@@ -27,3 +30,5 @@
     <p style="color:pink;font-size:15px;margin-top:6px">*Photo uploads take 5-30 seconds. Please be patient.</p>
   </div>
 <% end %>
+
+

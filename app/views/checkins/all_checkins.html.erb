@@ -9,7 +9,7 @@
       <a href="#" data-filter=".all" class="current all_of_them">ALL OF THEM</a><br>
       <% @locations.each do |location| %>
         <div class="filter_links">
-          <a class="filter_links_each" href="#" data-filter=".<%= (location.name.gsub(/\s+/,"")).downcase %>"><%= location.name %> </a>
+          <a href="#" data-filter=".<%= (location.name.gsub(/\s+/,"")).downcase %>"><%= location.name %> </a>
         </div>
       <% end %>
     </div>
