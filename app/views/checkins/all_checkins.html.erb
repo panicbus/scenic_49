@@ -6,7 +6,7 @@
   <div class="allCheckins_filter">
 
     <div id="locations_links">
-      <a href="#" data-filter=".all" class="current all_of_them">ALL OF THEM</a><br>
+      <a href="#" data-filter=".all" class="current all_of_them">ALL OF THEM</a><br><br>
       <% @locations.each do |location| %>
         <div class="filter_links">
           <a href="#" data-filter=".<%= (location.name.gsub(/\s+/,"")).downcase %>"><%= location.name %> </a>

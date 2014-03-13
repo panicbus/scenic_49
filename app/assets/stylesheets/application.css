@@ -265,7 +265,7 @@ body .commentModal {
 	padding: 10px;
 	background-color: gray;
 	border-radius: 15px;
-	width: 31.5%;
+	width: 31%;
 	font-size: 20px;
 }
 
@@ -280,7 +280,6 @@ body .commentModal {
 	color: #fff;
 	padding: 50px 10px 30px 10px;
 	width: 100%;
-	/*height: 200%;*/
 	border: 0; 
 }
 
@@ -289,20 +288,23 @@ body .commentModal {
 		color: #ecf0f1;
 		font-size: 16px;
 		padding: 5px 20px 5px 20px;
-		margin: 0px 1% 0px 1%;
 		border-radius: 30px;
 }
 
-#locations_links > .all_of_them {
-	font-size: 20px;
+.all_of_them {
 	width: 50%;
-	margin: -10px auto 5px;
+	margin: -13px auto -12px;
 	display: block;
 	text-align: center;	
 	letter-spacing: 5px;
 }
 
+#locations_links {
+	margin-left: 3%;
+}
+
 .filter_links {
+	margin: -14px 0.5% 10px 0.5%;
 	display: inline;
 }
 
@@ -331,11 +333,9 @@ body .commentModal {
 	#welcome {
 		position: fixed;
 		margin: 10px 10px 10px 10px;
-		/*font-size: 15px;*/
 	}
 
 	#welcome_title {
-	/*	line-height: 25px;*/
 		margin-top: 5px;
 	}
 
@@ -357,17 +357,7 @@ body .commentModal {
 	  padding-top: 0;
 	}
 
-	.navbar {
-/*		height: 20px;
-		padding: -15px 0 15px 0;*/
-	}
-
-	.navbar-brand {
-		/*position: absolute;*/
-		/*margin: 0px;*/
-	}
-
-	 .nav_title {
+	.nav_title {
 		font-size: 16px;
 		margin: -40px 10px 10px -10px;
 		letter-spacing: -1px;
