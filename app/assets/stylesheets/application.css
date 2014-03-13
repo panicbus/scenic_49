@@ -293,18 +293,18 @@ body .commentModal {
 
 .all_of_them {
 	width: 50%;
-	margin: -13px auto -12px;
+	margin: -13px 30% -12px auto;
 	display: block;
 	text-align: center;	
 	letter-spacing: 5px;
 }
 
 #locations_links {
-	margin-left: 3%;
+	margin-left: 8%;
 }
 
 .filter_links {
-	margin: -10px 0.4% 10px 0.3%;
+	margin: -15px 0.4% 10px 0.3%;
 	display: inline;
 }
 
