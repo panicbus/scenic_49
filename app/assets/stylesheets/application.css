@@ -304,9 +304,10 @@ body .commentModal {
 }
 
 .filter_links {
-	/*margin: -15px 0.4% 10px 0.3%;*/
-	margin: -15px 1.4% 10px 1.3%;
+	/*margin: -15px 0.4% 10px 0.3%;   -- optimized for iPad landscape*/
+	margin: -15px 1.4% 10px 1.3%; /*-- optimized for laptop view*/
 	display: inline;
+	vertical-align: 20px;
 }
 
 #locations_links a:hover {
