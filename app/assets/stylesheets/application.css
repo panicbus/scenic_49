@@ -300,8 +300,10 @@ body .commentModal {
 }
 
 #locations_links {
-	margin-left: 0.5%;
+	margin: 0.5% auto;
 	width: 100%;
+	display: block;
+	text-align: center;
 }
 
 .filter_links {
