@@ -17,10 +17,22 @@ Choose the neighborhood on the map in which you live, have strong feelings about
 
 ====
 ####Reproduction is encouraged!
-<b>_This project can be cloned and reproduced for any city in the world._</b>
 
 If you would like to start a conversation about how your city is changing in its modern incarnation, please feel free to clone this repository and use it for your own city. 
 
-The best way is to use [Mapbox.com](http://www.mapbox.com) for your map API and [geojson.io](http://geojson.io/) to create your route.  
+<b style="color:red">_This project can be cloned and reproduced for any city in the world._</b>
 
-Feel free to reach out to me for details.
+######Clone this repository to your local repo and follow these steps: 
+ * Go to [Mapbox.com](http://www.mapbox.com) and generate a map for your city. 
+ * Plug the unique identifier into the `assets/javascripts/maps.js` file. (It should look something like this: `your_name.h4on0f5b`)
+ * Map out your route and get your location coords at [geojson.io](http://geojson.io/). Plug the lat/long coordinates into the JSON array in `assets/javascripts/route.js`.  
+ * Seed the latitude and longitude data of your locations into the database by way of `db/seeds.rb`.
+ * Do a `rake db:migrate`.
+ * Do a `rake db:seed`.  
+ * Change to your personal AWS credentials in `application.yml` 
+ * `bundle install`
+ * Test
+ * Deploy to your favorite host!
+ 
+
+###Feel free to reach out to me for details.
