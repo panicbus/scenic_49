@@ -34,5 +34,14 @@ If you would like to start a conversation about how your city is changing in its
  * Test
  * Deploy to your favorite host!
  
+ <b>If deploying to Heroku you'll need to add the following</b>:
+ 
+ * `heroku apps:create yourappname`
+ * **Push to github**
+ * `git remote -v`
+ * `git push heroku master`
+ * `heroku run rake db:migrate`
+ * `heroku run rake db:seed`
+ 
 
 ###Feel free to reach out to me for details.
