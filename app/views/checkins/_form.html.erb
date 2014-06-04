@@ -27,6 +27,11 @@
     <%= f.submit 'Check in!' %>
     <p style="color:pink;font-size:15px;margin-top:6px">*Photo uploads take 5-30 seconds. Please be patient.</p>
   </div>
+  <!-- create some scroll space after form if no checkins there --> 
+    <% if !@location.checkins.any? %>
+      <br><br><br>
+    <% end %>
+  
 <% end %>
 
 
